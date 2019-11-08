@@ -32,7 +32,7 @@ If you find the assignment too challenging to complete, you can bet the first pl
 #### Requirement #1: Your application's UI should contain the following:
 - [ ] An **input field** for a user to enter a city name **(U.S. cities only)**
 - [ ] A **submit button**
-- [ ] A placeholder element (such as a <div>) used to display the current temperature
+- [ ] A placeholder element (such as a `<div>`) used to display the current temperature
 
 ### Requirement #2: Core Functionality
 - [ ] When the submit button is clicked:
