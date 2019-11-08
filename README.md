@@ -20,7 +20,7 @@ For this lab you'll be using the Open Weather Data API. In order to use it, plea
 
 4. Open Insomnia to check out the data you're working with and to verify that your api key works. Make a GET request to the following URL in Insomnia, adding your API key to the end.
 
-5. Read the follow part of the OpenWeather docs to learn how your API requests should be structured (*Important!*): [https://openweathermap.org/appid#use](https://openweathermap.org/appid#use)
+5. Read the follow part of the OpenWeather docs to learn how your API requests should be structured (**Important!**): [https://openweathermap.org/appid#use](https://openweathermap.org/appid#use)
 
 #### ⚡️ Plan your implementation approach using pseudocode
 If you find the assignment too challenging to complete, you can bet the first place to check is your pseudocode!
@@ -47,13 +47,13 @@ If you find the assignment too challenging to complete, you can bet the first pl
 
 ### Bonus Requirement (Optional): Bonus functionality - add Zip Code support
 
-- [ ] Update your application logic to support users being able to enter either a city name *or a zip code* into the text field
+- [ ] Update your application logic to support users being able to enter either a city name **or a zip code** into the text field
 
 - [ ] If users enter in a zip code, the app should make an API request to the OpenWeather API and fetch the current weather associated with the zip code
 
-- [ ] The data displayed in the UI should be the same as specified in *Requirement #2*
+- [ ] The data displayed in the UI should be the same as specified in **Requirement #2**
 
-- [ ] After making the changes, the application should support the ability to search for the current weather for *either* a city name (U.S. cities only) *OR* a zip code
+- [ ] After making the changes, the application should support the ability to search for the current weather for **either** a city name (U.S. cities only) **OR** a zip code
 
 **Tip**: Read the documentation to determine how your API request should be structured in order to fetch the current weather associated with a zip code
 
