@@ -7,6 +7,33 @@
   </head>
 
   <body>
+    <div class="container">
+        <form id="search">
+          <p>Weather Search</p>
+          <input type="text" id="query" />
+          <button>Search</button>
+        </form>
+      <table class="table" id="results-table">
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Current Temp</th>
+            <th>Weather Description</th>
+            <th>Min Temp</th>
+            <th>Max Temp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="cityName"></td>
+            <td id="currentTemp"></td>
+            <td id="weatherDescription"></td>
+            <td id="minTemp"></td>
+            <td id="maxTemp"> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
