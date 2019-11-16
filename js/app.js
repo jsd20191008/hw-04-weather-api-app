@@ -59,11 +59,11 @@ $('#submit-btn').click(() => {
 
       const cityTempMinK = city.main.temp_min
       const cityTempMinF = ((((parseInt(cityTempMinK)) - 273.15) * 9) / 5) + 32
-      const cityTempMin = cityTempMinF.toFixed(2)// + "°"
+      const cityTempMin = cityTempMinF.toFixed(2) + "°"
 
       const cityTempMaxK = city.main.temp_max
       const cityTempMaxF = ((((parseInt(cityTempMaxK)) - 273.15) * 9) / 5) + 32
-      const cityTempMax = cityTempMaxF.toFixed(2)// + "°"
+      const cityTempMax = cityTempMaxF.toFixed(2) + "°"
 
       // use jQuery to update the UI
       $('#city').text(cityName)
