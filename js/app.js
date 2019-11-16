@@ -17,17 +17,20 @@ $('#submit-btn').click(() => {
   event.preventDefault()
   //console.log('Search button is working')
 
-  searchCity()
+  searchTerm = $('#city-value').val()
+  console.log(searchTerm)
+
+  searchCity(searchTerm)
 
   })
 
   function searchCity(searchTerm) {
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=London&APPID={Insert_API_Key_}'
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&APPID=6744f0302a7b4f5ee2d725272970837f`
+  // const url = 'https://api.openweathermap.org/data/2.5/weather?q=Cairo&APPID=6744f0302a7b4f5ee2d725272970837f'
   // make API request using #.ajax()
       $.ajax({
         url: url,
-        type: 'GET',
-        data: { q: searchTerm }
+        type: 'GET'
 
       })
       .done((response) => {
@@ -45,17 +48,26 @@ const url = 'https://api.openweathermap.org/data/2.5/weather?q=London&APPID={Ins
     function displayResults(city) {
       // extract the information from the objects
       const cityName = city.name
-      const cityTemp = city.main.temp
+      const cityTempK = city.main.temp
+      const cityTempF = ((((parseInt(cityTempK)) - 273.15) * 9) / 5) + 32
+      const cityTemp = cityTempF.toFixed(2) + "°"
       const cityDescript = city.weather[0].description
-      const cityTempMin = city.main.temp_min
-      const cityTempMax = city.main.temp_max
+      const cityTempMinK = city.main.temp_min
+      const cityTempMinF = ((((parseInt(cityTempMinK)) - 273.15) * 9) / 5) + 32
+      const cityTempMin = cityTempMinF.toFixed(2) + "°"
+      const cityTempMaxK = city.main.temp_max
+      const cityTempMaxF = ((((parseInt(cityTempMaxK)) - 273.15) * 9) / 5) + 32
+      const cityTempMax = cityTempMaxF.toFixed(2) + "°"
 
       // use jQuery to update the UI
-      $('.city').text(cityName)
-      $('.temp').text(cityTemp)
-      $('.description').text(cityDescript)
-      $('.temp_min').text(cityTempMin)
-      $('.temp_max').text(cityTempMax)
+      $('#city').text(cityName)
+      $('#temp').text(cityTemp)
+      $('#description').text(cityDescript)
+      $('#temp_min').text(cityTempMin)
+      $('#temp_max').text(cityTempMax)
+
+        }
+      }
     }
 
 })
