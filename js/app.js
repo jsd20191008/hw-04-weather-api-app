@@ -38,6 +38,7 @@ $('#submit-btn').click(() => {
         // get response from successful API call and
         // pass response data to the updateUi() function
         displayResults(response)
+
       })
       .fail((error) => {
         console.log(error)
@@ -48,16 +49,21 @@ $('#submit-btn').click(() => {
     function displayResults(city) {
       // extract the information from the objects
       const cityName = city.name
+
       const cityTempK = city.main.temp
       const cityTempF = ((((parseInt(cityTempK)) - 273.15) * 9) / 5) + 32
-      const cityTemp = cityTempF.toFixed(2) + "°"
+      const cityTempPreDisp = cityTempF.toFixed(2)
+      const cityTemp = cityTempPreDisp + "°"
+
       const cityDescript = city.weather[0].description
+
       const cityTempMinK = city.main.temp_min
       const cityTempMinF = ((((parseInt(cityTempMinK)) - 273.15) * 9) / 5) + 32
-      const cityTempMin = cityTempMinF.toFixed(2) + "°"
+      const cityTempMin = cityTempMinF.toFixed(2)// + "°"
+
       const cityTempMaxK = city.main.temp_max
       const cityTempMaxF = ((((parseInt(cityTempMaxK)) - 273.15) * 9) / 5) + 32
-      const cityTempMax = cityTempMaxF.toFixed(2) + "°"
+      const cityTempMax = cityTempMaxF.toFixed(2)// + "°"
 
       // use jQuery to update the UI
       $('#city').text(cityName)
@@ -66,8 +72,15 @@ $('#submit-btn').click(() => {
       $('#temp_min').text(cityTempMin)
       $('#temp_max').text(cityTempMax)
 
-        }
-      }
+      changeTempColor(cityTempPreDisp)
     }
+
+  function changeTempColor(cityTempPreDisp) {
+    if (cityTempPreDisp > 85) {
+      document.getElementById("temp").style.color = '#ff0000'
+    } else if (cityTempPreDisp < 40) {
+      document.getElementById("temp").style.color = '#0000ff'
+    }
+  }
 
 })
