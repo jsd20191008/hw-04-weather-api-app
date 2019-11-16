@@ -80,6 +80,8 @@ $('#submit-btn').click(() => {
       document.getElementById("temp").style.color = '#ff0000'
     } else if (cityTempPreDisp < 40) {
       document.getElementById("temp").style.color = '#0000ff'
+    } else {
+      document.getElementById("temp").style.color = '#000000'
     }
   }
 
