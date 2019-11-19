@@ -25,8 +25,8 @@ $('#submit-btn').click(() => {
   })
 
   function searchCity(searchTerm) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&APPID={Insert_API_Key_Here}`
-  
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&APPID=6c020773c72c398344ed5f2a19411549`
+
   // make API request using #.ajax()
       $.ajax({
         url: url,
