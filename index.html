@@ -8,10 +8,30 @@
 
   <body>
 
+    <header>
+      <div class="title">
+        <center><h1>Weather Finder</h1></center>
+      </div>
+    </header>
+
+    <div class="container">
+      <center><div>
+        <input type="text" id="city-type" placeholder="Enter a city name...">
+        <input type="submit" value="Submit" id="submit-btn">
+      </div></center>
+      <center><div id='current-city'></div></center>
+      <center><div id='current-temp'></div></center>
+      <center><div id = 'min-temp'></div></center>
+      <center><div id = 'max-temp'></div></center>
+      <center><div id = 'description'></div></center>
+
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
