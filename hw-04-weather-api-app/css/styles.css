@@ -1,0 +1,16 @@
+input{
+		margin: 10px 0px;
+		padding: 5px;
+	}
+	#forecast{
+		display: none;/*This div should not appear until the weather is returned.*/
+	}
+	#forecast div{
+		width: 25vw;
+		border: 8px solid blue;
+		margin: 0 auto;
+		background: black;
+	}
+	img{
+		width:100%;
+	}
